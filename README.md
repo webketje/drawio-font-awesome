@@ -9,13 +9,27 @@ The [free icons of the FontAwesome icon set](https://fontawesome.com/icons?m=fre
 Download & unzip the [latest release](https://github.com/webketje/drawio-font-awesome/releases/latest), open Draw.io desktop,
 and in the <kbd>File</kbd> menu, choose <kbd>Open Library...</kbd>, then select the unzipped library.
 
+<details>
+  <summary>Screenshot ></summary>
+
 ![How to load this library on desktop](/assets/load-desktop.png)
+</details>
 
 ### Load online
 
 Thanks to [jsdelivr](https://jsdelivr.com) you can load this library without downloading anything directly!
-From the <kbd>File</kbd> menu, choose <kbd>Open Library from</kbd>, then <kbd>URL</kbd> and enter the URL below:
-[https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome]().
+From the <kbd>File</kbd> menu, choose <kbd>Open Library from</kbd>, then <kbd>URL</kbd> and enter the following URL:
+[https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome).
 
-![How to load this library online](/assets/load-online.png)
+
+<details>
+  <summary>Screenshot ></summary>
+
+  ![How to load this library online](/assets/load-online.png)
+</details>
+
+### Change icon shade
+
+You can change the icon shade (pale gray -> black ) after dragging it in your diagram by clicking it twice (not double-clicking).
+In the right sidebar, in the <kbd>Style</kbd> tab, uncollapse the **Property/ Value** listing, and play with the **Fill opacity**.
 
