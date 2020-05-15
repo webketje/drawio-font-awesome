@@ -3,23 +3,23 @@ var path = require("path");
 var pako = require("./pako");
 
 var srcPath = path.join(__dirname, 'Font-Awesome/svgs/solid');
+var distPath = path.join(__dirname, 'dist');
 
-var wrapper = fs.readFileSync(path.join(__dirname, 'wrapper.xml'), 'utf-8').replace(/>\s+</g, '><');
+var mxGraphXml = fs.readFileSync(path.join(__dirname, 'wrapper.xml'), 'utf-8').replace(/>\s+</g, '><');
+var svgIcons = fs.readdirSync(srcPath).map(function (p) {
+  return { name: p, contents: fs.readFileSync(path.join(srcPath, p), "utf-8") };
+});
 
-function wrap(main) {
-  var result = wrapper.replace('%xml%', main);
-  return result
-}
-
-function mxLibraryEntry(svg) {
-  var b64EncodedSvg = Buffer.from(
-    fs.readFileSync(path.join(srcPath, svg), "utf-8")
-  ).toString("base64");
+function mxLibraryEntry(svg, color) {
+  var xml = svg.contents;
+  if (color)
+    xml = svg.contents.replace('<path d', '<path fill="' + color.slice(color.indexOf('=') + 1) + '" d');
+  var b64EncodedSvg = Buffer.from(xml).toString("base64");
 
   // Unlike the btoa method in web browsers, the Buffer.toString method can be fed an int array, and
   // doesn't require a bytesToString conversion
-  xml = Buffer.from(
-    pako.deflateRaw(encodeURIComponent(wrap(b64EncodedSvg)))
+  var xml = Buffer.from(
+    pako.deflateRaw(encodeURIComponent(mxGraphXml.replace('%xml%', b64EncodedSvg)))
   ).toString("base64");
 
   return {
@@ -27,28 +27,44 @@ function mxLibraryEntry(svg) {
     w: 16,
     h: 16,
     aspect: "fixed",
-    title: path.basename(svg, ".svg")
+    title: path.basename(svg.name, ".svg")
   };
 }
 
-function mxLibraryXML(entries) {
+function mxLibrary(entries) {
   return ["<mxlibrary>", JSON.stringify(entries), "</mxlibrary>"].join("");
 }
 
-var svgFiles = fs.readdirSync(srcPath);
-var distPath = path.join(__dirname, 'dist');
+function output(color) {
+  fs.writeFileSync(
+    path.join(distPath, 'FontAwesome' + (color ? ' - ' + color : '')),
+    mxLibrary(svgIcons.map((file, index, arr) => {
+      process.stdout.write(" ");
+      process.stdout.clearLine();
+      process.stdout.cursorTo(0);
+      process.stdout.write(`Processing icons "${path.basename(file.name, '.svg')}" - ${index + 1} / ${arr.length}`)
+      return mxLibraryEntry(file, color);
+    })),
+    "utf-8"
+  );
+}
 
-if (!fs.statSync(distPath).isDirectory())
-  fs.mkdirSync(distPath)
-
-fs.writeFileSync(
-  path.join(distPath, 'Font Awesome'),
-  mxLibraryXML(svgFiles.map((file, index, arr) => {
-    process.stdout.write("Hello, World");
-    process.stdout.clearLine();
-    process.stdout.cursorTo(0);
-    process.stdout.write(`Processing icons "${path.basename(file, '.svg')}" - ${index + 1} / ${arr.length}`)
-    return mxLibraryEntry(file);
-  })),
-  "utf-8"
-);
+if (process.argv[2] === 'all')
+  [
+    '',
+    'white',
+    'red',
+    'green',
+    'blue',
+    'navy',
+    'teal',
+    'olive',
+    'purple',
+    'orange',
+    'brown',
+    'gray',
+  ].forEach(function (color) {
+    output(color);
+  });
+else
+  output(color);
