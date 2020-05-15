@@ -21,6 +21,12 @@ Thanks to [jsdelivr](https://jsdelivr.com) you can load this library without dow
 From the <kbd>File</kbd> menu, choose <kbd>Open Library from</kbd>, then <kbd>URL</kbd> and load the latest version:
 [https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome).
 
+<details>
+  <summary>Screenshot ></summary>
+
+  ![How to load this library online](/assets/load-online.png)
+</details>
+
 #### Colors
 The color can unfortunately not be changed through draw.io options. But you can load the entire library in a particular color, both from the release or online:
 
@@ -38,12 +44,6 @@ The color can unfortunately not be changed through draw.io options. But you can 
 
 #### Versions
 You can load different font-awesome versions by replacing `@online` by `@x.x.x`. At the moment 5.8.2 and 5.10.2 are available.
-
-<details>
-  <summary>Screenshot ></summary>
-
-  ![How to load this library online](/assets/load-online.png)
-</details>
 
 ### Change icon shade
 
