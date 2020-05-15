@@ -18,9 +18,26 @@ and in the <kbd>File</kbd> menu, choose <kbd>Open Library...</kbd>, then select 
 ### Load online
 
 Thanks to [jsdelivr](https://jsdelivr.com) you can load this library without downloading anything directly!
-From the <kbd>File</kbd> menu, choose <kbd>Open Library from</kbd>, then <kbd>URL</kbd> and enter the following URL:
+From the <kbd>File</kbd> menu, choose <kbd>Open Library from</kbd>, then <kbd>URL</kbd> and load the latest version:
 [https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome).
 
+#### Colors
+The color can unfortunately not be changed through draw.io options. But you can load the entire library in a particular color, both from the release or online:
+
+[https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - blue](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20blue)  
+[https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - brown](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20brown)  
+[https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - gray](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20gray)  
+[https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - green](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20green)  
+[https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - navy](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20navy)  
+[https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - olive](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20olive)  
+[https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - orange](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20orange)  
+[https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - purple](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20purple)  
+[https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - red](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20red)  
+[https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - teal](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20teal)  
+[https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - white](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20white)
+
+#### Versions
+You can load different font-awesome versions by replacing `@online` by `@x.x.x`. At the moment 5.8.2 and 5.10.2 are available.
 
 <details>
   <summary>Screenshot ></summary>
