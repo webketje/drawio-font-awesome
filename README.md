@@ -10,7 +10,7 @@ Download & unzip the [latest release](https://github.com/webketje/drawio-font-aw
 and in the <kbd>File</kbd> menu, choose <kbd>Open Library...</kbd>, then select the unzipped library.
 
 <details>
-  <summary>Screenshot ></summary>
+  <summary>Screenshot</summary>
 
 ![How to load this library on desktop](/assets/load-desktop.png)
 </details>
@@ -22,7 +22,7 @@ From the <kbd>File</kbd> menu, choose <kbd>Open Library from</kbd>, then <kbd>UR
 [https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome).
 
 <details>
-  <summary>Screenshot ></summary>
+  <summary>Screenshot</summary>
 
   ![How to load this library online](/assets/load-online.png)
 </details>
@@ -47,8 +47,7 @@ You can load different font-awesome versions by replacing `@online` by `@x.x.x`.
 
 ### Change icon shade
 
-You can change the icon shade (pale gray -> black ) after dragging it in your diagram by clicking it twice (not double-clicking).
-In the right sidebar, in the <kbd>Style</kbd> tab, uncollapse the **Property/ Value** listing, and play with the **Fill opacity**.
+To change the icon shade after dragging it in your diagram, select the icon, then in the right sidebar, in the <kbd>Style</kbd> tab, uncollapse the **Property/ Value** listing, and play with the **Fill opacity**.
 
 ### Develop & publish
 
