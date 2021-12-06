@@ -1,6 +1,6 @@
 # Draw.io FontAwesome Library
 
-The [free icons of the FontAwesome icon set](https://fontawesome.com/icons?m=free) (normalized and) ready for usage with [draw.io](https://draw.io) or [draw.io Desktop](https://github.com/jgraph/drawio-desktop). Base size of the icons is 16pt, ideal for working with a page grid of 8pt. Latest published version is **FontAwesome 5.8.2**.
+The [free icons of the FontAwesome icon set](https://fontawesome.com/icons?m=free) (normalized and) ready for usage with [draw.io](https://draw.io) or [draw.io Desktop](https://github.com/jgraph/drawio-desktop). Base size of the icons is 16pt, ideal for working with a page grid of 8pt. Latest published version is **FontAwesome 5.15.4**.
 
 ## Usage
 
@@ -43,10 +43,16 @@ The color can unfortunately not be changed through draw.io options. But you can 
 [https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - white](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20white)
 
 #### Versions
-You can load different font-awesome versions by replacing `@online` by `@x.x.x`. At the moment 5.8.2 and 5.10.2 are available.
+You can load different font-awesome versions by replacing `@online` by `@x.x.x`. At the moment 5.15.4, 5.14.0, 5.10.2 and 5.8.2 are available.
 
 ### Change icon shade
 
 You can change the icon shade (pale gray -> black ) after dragging it in your diagram by clicking it twice (not double-clicking).
 In the right sidebar, in the <kbd>Style</kbd> tab, uncollapse the **Property/ Value** listing, and play with the **Fill opacity**.
 
+### Develop & publish
+
+1. Run `cd FontAwesome && git fetch origin && git submodule update`
+2. Run `git checkout x.x.x` in the Fontawesome submodule dir (tag of the submodule you want to publish).
+3. Run `node build all` from the terminal. 
+4. Move `dist/` output to the root of the orphan branch `online`
