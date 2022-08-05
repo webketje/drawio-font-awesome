@@ -15,6 +15,8 @@ and in the <kbd>File</kbd> menu, choose <kbd>Open Library...</kbd>, then select 
 ![How to load this library on desktop](/assets/load-desktop.png)
 </details>
 
+*If you can see the files but they look "disabled", try to rename them with the `.xml` extension via File Explorer, then reopen the <kbd>File</kbd> menu.*
+
 ### Load online
 
 Thanks to [jsdelivr](https://jsdelivr.com) you can load this library without downloading anything directly!
