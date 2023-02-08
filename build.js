@@ -11,9 +11,26 @@ var svgIcons = fs.readdirSync(srcPath).map(function (p) {
 });
 
 function mxLibraryEntry(svg, color) {
+  // Create a color lookup table to convert web standard olor names to hex values for Draw.io
+  colorLookup = {
+    black: '#000000',
+    white: '#ffffff',
+    red: '#FF0000',
+    green: '#008000',
+    blue: '#0000FF',
+    navy: '#000080',
+    teal: '#008080',
+    olive: '#808000',
+    purple: '#800080',
+    orange: '#FFA500',
+    brown: '#A52A2A',
+    gray: '#808080',
+  };
+  
   var xml = svg.contents;
   if (color)
-    xml = svg.contents.replace('<path d', '<path fill="' + color.slice(color.indexOf('=') + 1) + '" d');
+    // Modify the path to insert a CSS definiation for the path element that will later be picked up in Draw.io
+    xml = svg.contents.replace('<path d', '<style type="text/css">path {fill:' + colorLookup[color.slice(color.indexOf('=') + 1)] + ';}</style><path d');
   var b64EncodedSvg = Buffer.from(xml).toString("base64");
 
   // Unlike the btoa method in web browsers, the Buffer.toString method can be fed an int array, and
@@ -37,7 +54,8 @@ function mxLibrary(entries) {
 
 function output(color) {
   fs.writeFileSync(
-    path.join(distPath, 'FontAwesome' + (color ? ' - ' + color : '')),
+    // add the file extention to make it easier to open the file
+    path.join(distPath, 'FontAwesome' + (color ? ' - ' + color : '') + '.xml'),
     mxLibrary(svgIcons.map((file, index, arr) => {
       process.stdout.write(" ");
       process.stdout.clearLine();
@@ -51,7 +69,7 @@ function output(color) {
 
 if (process.argv[2] === 'all')
   [
-    '',
+    'black',
     'white',
     'red',
     'green',
