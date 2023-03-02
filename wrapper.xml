@@ -2,7 +2,7 @@
   <root>
     <mxCell id="0"/>
     <mxCell id="1" parent="0"/>
-    <mxCell id="2" value="" style="shape=image;aspect=fixed;image=data:image/svg+xml,%xml%;connectable=0;movable=1;verticalLabelPosition=bottom;resizable=1;rotatable=0;cloneable=0;deletable=1;recursiveResize=0;imageBackground=none;verticalAlign=top;" vertex="1" parent="1">
+    <mxCell id="2" value="" style="editableCssRules=path;shape=image;aspect=fixed;image=data:image/svg+xml,%xml%;connectable=0;movable=1;verticalLabelPosition=bottom;resizable=1;rotatable=0;cloneable=0;deletable=1;recursiveResize=0;imageBackground=none;verticalAlign=top;" vertex="1" parent="1">
       <mxGeometry width="16" height="16" as="geometry"/>
     </mxCell>
   </root>
