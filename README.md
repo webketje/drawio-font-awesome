@@ -15,7 +15,7 @@ and in the <kbd>File</kbd> menu, choose <kbd>Open Library...</kbd>, then select 
 ![How to load this library on desktop](/assets/load-desktop.png)
 </details>
 
-*If you can see the files but they look "disabled", try to rename them with the `.xml` extension via File Explorer, then reopen the <kbd>File</kbd> menu.*
+*If you can see the files but they look "disabled", try to rename them with the `.xml` extension via File Explorer, then reopen the <kbd>File</kbd> menu. If you can't see the files, make sure the file selection dialog shows "All Files" and not only draw.io diagrams*
 
 ### Load online
 
@@ -29,8 +29,9 @@ From the <kbd>File</kbd> menu, choose <kbd>Open Library from</kbd>, then <kbd>UR
   ![How to load this library online](/assets/load-online.png)
 </details>
 
-#### Colors
-The color can unfortunately not be changed through draw.io options. But you can load the entire library in a particular color, both from the release or online:
+### Colors
+#### Default colors
+You can load the entire library in a particular color, both from the release or online:
 
 [https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - blue](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20blue)  
 [https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - brown](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20brown)  
@@ -44,15 +45,35 @@ The color can unfortunately not be changed through draw.io options. But you can 
 [https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - teal](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20teal)  
 [https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome - white](https://cdn.jsdelivr.net/gh/webketje/drawio-font-awesome@online/FontAwesome%20-%20white)
 
-#### Versions
-You can load different font-awesome versions by replacing `@online` by `@x.x.x`. At the moment 6.1.1, 5.15.4, 5.14.0, 5.10.2 and 5.8.2 are available.
+#### Changing the colors in Draw.io/ Diagrams.net
 
-### Change icon shade
+Once the icon is placed on your canvas, select it and in the <kbd>Style</kbd> tab you can alter its <kbd>Fill path</kbd>
+
+<details>
+  <summary>Screenshot</summary>
+
+  ![How to load this library online](/assets/fill-path.png)
+</details>
+
+#### Change icon shade with fill opacity
 
 You can change the icon shade (pale gray -> black ) after dragging it in your diagram by clicking it twice (not double-clicking).
 In the right sidebar, in the <kbd>Style</kbd> tab, uncollapse the **Property/ Value** listing, and play with the **Fill opacity**.
 
+#### Versions
+You can load different font-awesome versions by replacing `@online` by `@x.x.x`. At the moment 6.1.1, 5.15.4, 5.14.0, 5.10.2 and 5.8.2 are available.
+
 ### Building
+
+Initial setup:
+
+```bash
+git clone git@github.com:webketje/drawio-font-awesome.git
+cd drawio-font-awesome
+git submodule init
+```
+
+Release:
 
 ```bash
 cd Font-Awesome
