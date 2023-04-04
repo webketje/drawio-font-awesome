@@ -1,6 +1,6 @@
 # Draw.io FontAwesome Library
 
-The [free icons of the FontAwesome icon set](https://fontawesome.com/icons?m=free) (normalized and) ready for usage with [diagrams.net](https://app.diagrams.net/) or [draw.io Desktop](https://github.com/jgraph/drawio-desktop). Base size of the icons is 16pt, ideal for working with a page grid of 8pt. Latest published version is **FontAwesome 6.1.1**.
+The [free icons of the FontAwesome icon set](https://fontawesome.com/icons?m=free) (normalized and) ready for usage with [diagrams.net](https://app.diagrams.net/) or [draw.io Desktop](https://github.com/jgraph/drawio-desktop). Base size of the icons is 16pt, ideal for working with a page grid of 8pt. Latest published version is **FontAwesome 6.4.0**.
 
 ## Usage
 
@@ -61,7 +61,7 @@ You can change the icon shade (pale gray -> black ) after dragging it in your di
 In the right sidebar, in the <kbd>Style</kbd> tab, uncollapse the **Property/ Value** listing, and play with the **Fill opacity**.
 
 #### Versions
-You can load different font-awesome versions by replacing `@online` by `@x.x.x`. At the moment 6.1.1, 5.15.4, 5.14.0, 5.10.2 and 5.8.2 are available.
+You can load different font-awesome versions by replacing `@online` by `@x.x.x`. At the moment 6.4.0, 6.1.1, 5.15.4, 5.14.0, 5.10.2 and 5.8.2 are available.
 
 ### Building
 
