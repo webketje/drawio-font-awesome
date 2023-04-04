@@ -57,7 +57,7 @@ function mxLibrary(entries) {
 function output(color) {
   fs.writeFileSync(
     // add the file extention to make it easier to open the file
-    path.join(distPath, 'FontAwesome' + (color ? ' - ' + color : '') + '.xml'),
+    path.join(distPath, 'FontAwesome' + (color ? ' - ' + color : '')),
     mxLibrary(svgIcons.map((file, index, arr) => {
       process.stdout.write(" ");
       process.stdout.clearLine();
